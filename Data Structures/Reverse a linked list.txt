@@ -1,4 +1,20 @@
-    static SinglyLinkedListNode reverse(SinglyLinkedListNode head) {
+#USING 3 POINTERS
+  static SinglyLinkedListNode reverse(SinglyLinkedListNode head) {
+      SinglyLinkedListNode ahead, curr, prev=null;
+      curr=head;
+      while(curr!=null){
+      ahead= curr.next;
+      curr.next=prev;
+      prev=curr;
+      curr=ahead;
+      }
+      head=prev;
+      return head;  
+
+  
+#RECURSION
+
+   static SinglyLinkedListNode reverse(SinglyLinkedListNode head) {
         if(head==null) return head;
         if(head.next==null) return head;
          
