@@ -1,0 +1,14 @@
+    static SinglyLinkedListNode reverse(SinglyLinkedListNode head) {
+        if(head==null) return head;
+        if(head.next==null) return head;
+         
+        SinglyLinkedListNode newNode = reverse(head.next);
+
+        head.next.next=head;
+        head.next=null;
+
+        return newNode;
+
+
+
+    }
