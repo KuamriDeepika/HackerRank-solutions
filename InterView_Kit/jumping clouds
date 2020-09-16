@@ -1,0 +1,16 @@
+    static int jumpingOnClouds(int[] arr) {
+        int clouds = arr.length;
+        int i=0;
+        int jump=0;
+        while(i < clouds-1){
+            if(i+2<clouds && arr[i+2] == 0){
+                i=i+2;
+                ++jump;
+            }
+            else{
+                i=i+1;
+                ++jump;
+            }
+        }
+        return jump;
+    }
