@@ -1,0 +1,16 @@
+// Complete the sockMerchant function below.
+    static int sockMerchant(int n, int[] arr) {
+        Set<Integer> sockColor=new HashSet<>();
+        int pair=0;
+        for(int i=0; i<n;i++){
+            if(!sockColor.contains(arr[i])){
+                sockColor.add(arr[i]);
+            }
+            else{
+                pair++;
+                sockColor.remove(arr[i]);
+            }
+        }
+        return pair;
+
+    }
