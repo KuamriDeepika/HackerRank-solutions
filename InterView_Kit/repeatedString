@@ -1,0 +1,15 @@
+// Complete the repeatedString function below.
+    static long repeatedString(String s, long n) {
+    long len= Long.valueOf(s.length());
+        int a=0;
+        for (int i = 0; i < len; i++) {
+            if (s.charAt(i) == 'a') 
+                ++a;
+        }
+         long occ = (n/len) * a;
+        for (int i = 0; i < n%len; i++) {
+            if (s.charAt(i) == 'a')
+                ++occ;
+        }
+        return occ;
+    }
